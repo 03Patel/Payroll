@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const SalarySlip = require('../models/SalarySlip');
+const SalarySlip = require('../models/salarySlip');
 const authMiddleware = require('../middleware/auth');
 
 // --- Create Salary Slip (Admin only) ---
