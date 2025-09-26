@@ -18,7 +18,9 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/salary', salaryRoutes);
 app.use('/api/expense', expenseRoutes);
-
+app.get("/api", (req, res) => {
+  res.json({ message: "Payroll Management API is running" });
+});
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
